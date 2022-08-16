@@ -1,0 +1,33 @@
+<div class="container">
+    <legend>Editar</legend>
+    <form>
+        <div class="mb-3">
+          <label for="txtname" class="form-label">Ingrese el nombre</label>
+          <input type="text" class="form-control" id="txtname" name="name" aria-describedby="emailHelp" required  minlength="4" maxlength="15" size="20"[(ngModel)]="fruitForm.name">
+          
+        </div>
+        <div class="mb-3">
+            <label for="txtedad" class="form-label">Ingrese la edad</label>
+            <input type="number" class="form-control" id="txtedad" name="edad" aria-describedby="emailHelp" [(ngModel)]="fruitForm.edad" >
+            
+          </div>
+          <div class="mb-3">
+            <label for="txtfechaday" class="form-label">Ingrese la fecha de nacimiento</label>
+            <input type="number" class="form-control" id="txtfechaday" name="fechaday" aria-describedby="emailHelp" title="Enter input here" placeholder="Día" [(ngModel)]="fruitForm.fechaday">
+            <input type="number" class="form-control" id="txtfecham" name="fecham" aria-describedby="emailHelp" placeholder="Mes" [(ngModel)]="fruitForm.fecham">
+            <input type="number" class="form-control" id="txtfechaa" name="fechaa" aria-describedby="emailHelp" placeholder="Año" [(ngModel)]="fruitForm.fechaa">
+          </div>
+          <div class="mb-3">
+            <label for="txtfechaday" class="form-label">Ingrese la fecha de inscripcion</label>
+            <input type="number" class="form-control" id="txtfechaiday" name="fechaiday" aria-describedby="emailHelp" placeholder="Día" [(ngModel)]="fruitForm.fechaiday">
+            <input type="number" class="form-control" id="txtfechaim" name="fechaim" aria-describedby="emailHelp" placeholder="Mes" [(ngModel)]="fruitForm.fechaim">
+            <input type="number" class="form-control" id="txtfechaia" name="fechaia" aria-describedby="emailHelp" placeholder="Año" [(ngModel)]="fruitForm.fechaia" >
+          </div>
+          <div class="mb-3">
+            <label for="txtedad" class="form-label">Ingrese costo</label>
+            <input type="number" class="form-control" id="txtcost" name="cost" aria-describedby="emailHelp" [(ngModel)]="fruitForm.cost" >
+            
+          </div>
+        <button type="button" (click)="update()" class="btn btn-primary">Editar</button>
+      </form>
+</div>

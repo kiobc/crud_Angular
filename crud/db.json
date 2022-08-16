@@ -1,0 +1,28 @@
+{
+  "fruits": [
+    {
+      "id": 1,
+      "name": "papa",
+      "edad": 55,
+      "fechaday": 22,
+      "fecham": 7,
+      "fechaa": 1992,
+      "fechaiday": 20,
+      "fechaim": 7,
+      "fechaia": 2022,
+      "cost": 0
+    },
+    {
+      "id": 2,
+      "name": "Brayan Calderón",
+      "edad": 30,
+      "fechaday": 22,
+      "fecham": 7,
+      "fechaa": 1992,
+      "fechaiday": 1,
+      "fechaim": 8,
+      "fechaia": 2022,
+      "cost": 1
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row mt-2">
+    <div class="col col-md-4  offset-md-4">
+      <a class="btn btn-primary" routerLink="/fruits/create">Crear </a>
+    </div>
+  </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombres</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Dia de nacimiento</th>
+            <th scope="col">Mes de nacimiento</th>
+            <th scope="col">Año de nacimiento</th>
+            <th scope="col">Día de inscripción</th>
+            <th scope="col">Mes de inscripción</th>
+            <th scope="col">Mes de inscripción</th>
+            <th scope="col">Costo</th>
+            <th scope="col">Accion</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of allFruits">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.edad}}</td>
+            <td>{{item.fechaday}}</td>
+            <td>{{item.fecham}}</td>
+            <td>{{item.fechaa}}</td>
+            <td>{{item.fechaiday}}</td>
+            <td>{{item.fechaim}}</td>
+            <td>{{item.fechaia}}</td>
+            <td>{{item.cost}}</td>
+            <td><a class="btn btn-primary" [routerLink]="['/fruits/edit',item.id]">Editar</a>
+            <button type="button" class="btn btn-danger" (click)="opendeleteModal(item.id)" >Borrar</button>
+            </td>
+
+          </tr>
+          
+        </tbody>
+      </table>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmar borrar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Está seguro de borrar?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-danger" (click)="delete()" >Confirmar borrar</button>
+      </div>
+    </div>
+  </div>
+</div>
